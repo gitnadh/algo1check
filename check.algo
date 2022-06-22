@@ -25,7 +25,7 @@ FOR i FROM 0 TO S.length-1  DO
 
 END_FOR
 
-l:=S.length;
+l:=l+S.length;
   Write("The length of the sentence:",l);
   Write("The number of words in the sentence:",nbw+1);
   Write("The number of vowels in the sentence:",nbv);
