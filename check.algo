@@ -1,0 +1,33 @@
+ALGORITHM check
+VAR
+
+    S:STRING:="";
+    i,nbw,nbv,l:INTEGER:=0;
+    c:CHAR;
+
+BEGIN
+
+WHILE (S[S.length<>'.']) DO
+    Read(c);
+    S:=S+c;
+    i:=i+1;
+END_WHILE
+
+FOR i FROM 0 TO S.length-1  DO
+
+    IF (S[i]=' ') THEN
+        nbw:=nbw+1;
+    END_IF
+
+    IF (S[i]='a' or S[i]='A' or S[i]='e' or S[i]='E' or S[i]='i' or S[i]='I' or S[i]='o' or S[i]='O' or S[i]='u' or S[i]='U' or S[i]='y' or S[i]='Y') THEN
+        nbv:=nbv+1;
+    END_IF
+
+END_FOR
+
+l:=S.length;
+  Write("The length of the sentence:",l);
+  Write("The number of words in the sentence:",nbw+1);
+  Write("The number of vowels in the sentence:",nbv);
+    
+END
